@@ -34,6 +34,12 @@
     <label for="Seasons">Temporadas (hasta 4):</label>
     <input type="number" id="Seasons" name="Seasons" min="1" max="4" required>
     <br>
+    <label for="HasFaltas">¿Ha tenido faltas?</label>
+    <input type="checkbox" id="HasFaltas" name="HasFaltas" value="true">
+    <label for="HasFaltas">Sí</label>
+    <input type="checkbox" id="HasFaltas" name="HasFaltas" value="false">
+    <label for="HasFaltas">No</label>
+    <br>
     <button type="submit">Registrar</button>
 </form>
 
@@ -47,6 +53,7 @@
         <p>Club: @Model.Club</p>
         <p>Categorías: @string.Join(", ", Model.Categories)</p>
         <p>Temporadas: @Model.Seasons</p>
+        <p>Ha tenido faltas: @((Model.HasFaltas) ? "Sí" : "No")</p>
         <p>Monto Total: @Model.TotalAmount.ToString("C")</p>
     </div>
 }
